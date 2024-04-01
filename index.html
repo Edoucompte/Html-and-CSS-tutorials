@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Flex et grid</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <h1>Apprenons ensemble</h1>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#prerequis">Préreq</a></li>
+                    <li><a href="flex.html">Flex</a></li>
+                    <li><a href="#grid">Grid</a></li>
+                    <li><a href="tp.html">TP</a></li>
+                </ul>
+            </nav>
+
+            <div id="hContent">
+                <h2>Tutoriel et TP en HTML et CSS</h2>
+                <p>Ceci est un site dans lequel nous montrons pas à pas comment utiliser des types 
+                    de propriétés d'affichage <strong>Flex</strong> et <strong>grid</strong>. 
+                    Pas de panique si vous ne connaissez rien à propos. 
+                    Ca tombe bien! Apprenons ensemble.</p>
+                    <button>Commencez !!!</button>
+            </div>
+
+        </header>
+
+        <main>
+            <section id="prerequis">
+                <h3>Les Prérequis de ce Tutoriel</h3>
+                <p>Pour ce tutoriel vous n'aurez pas besoin de connaissances avancées, juste:</p>
+                <ol>
+                    <li>Les bases de <em>HTML</em> (le code de base, les balises, leurs attributs id et class)</li>
+                    <li>Les bases de <em>CSS</em> (les selecteurs, les propriétés et quelques valeurs) </li>
+                    <li>Relier un ficher CSS à une page HTML</li>
+                    <li>Avoir un éditeur <em>VsCode</em> et savoir y utiliser le terminal en <em>GitBash</em>. Vous en faites pas, on va gérer.</li>
+                </ol>
+                <p>C'est bon? On décolle !!!</p>
+            </section>
+
+            <section id="debut" class="rightBlock">
+                <h3 class="right">Débutons au même niveau </h3>
+                <p>Commençons par créer le projet dans lequel nous travaillerons dans vsCode.</p>
+                <ol>
+                    <li>Ouvrons une nouvelle fenêtre vsCode</li>
+                    <li>Ouvrons un nouveau terminal</li>
+                    <li>Créons un dossier "Flex_Grid_Projet" et y ajoute nos codes</li>
+                    <li>Créons un fichier `index.html` et un ficher `style.css`</li>
+                    <li>Ecrivons le code de base HTML (avec ! sur vsCode) et relions le au style.css</li>
+                </ol>
+                <div class="photos">
+                    <div class="imgbox"><img src="assets/initProj.png" alt="Initialisation du prohet en CLI"></div>
+                    <div class="imgbox"><img src="assets/liaison_css.png" alt="Initialisation du prohet en CLI"></div>
+                </div>
+                <p>Si les lignes de commande vous dérange, créez manuellement vos dossiers et fichiers.</p>
+            </section>
+
+            <section id="type">
+                <h3>Les types block et inline</h3>
+                <p>Nous commencerons par remarquez deux types de balises en HTML :</p>
+                <div class="box">
+                    <h4>Block</h4>
+                    <p>Ils occupent toute la ligne de la page. Ex: h1, p, div .. </p>
+                    <p>Il n'y qu'une façon d'en être sûr. C'est codé!!!</p>
+                    <ol>
+                        <li>Ecrivez un titre dans votre code.</li>
+                        <li>Ajoutez lui une <em>border</em> et un <em>background</em> pour en être sûr</li>
+                    </ol>
+                    <div class="photos">
+                        <div class="imgbox"></div><img src="assets/titre.png" alt="un titre Html"></div>
+                        <div class="imgbox"></div><img src="assets/styleTitre.png" alt="son style css"></div>
+                    </div>
+                </div>
+                <div class="box rightBlock">
+                    <h4 class="right">Inline</h4>
+                    <p class="right">Ils occupent juste la plus necéssaire. Ex: a, span .. </p>
+                    <p class="right">Il n'y qu'une façon d'en être sûr. C'est codé!!!</p>
+                    <ol class="right">
+                        <li>Ecrivez une liste  avec ancres dans votre code.</li>
+                        <li>Ajoutez une <em>border</em> et un <em>background</em> à ses ancres <em>li</em> pour en être sûr</li>
+                    </ol>
+                    <div class="photos">
+                        <div class="imgbox"></div><img src="assets/listeMenu.png" alt="un titre Html"></div>
+                        <div class="imgbox"></div><img src="assets/styleListepng.png" alt="son style css"></div>
+                    </div>
+                    
+                    <p style="margin: 5%;">Et Voilà! C'est une très bonne remarque pour notre tuto. <br>
+                         C'est très moche pour un début, mais perseverons.</p>
+                    <p style="margin: 5%;">C'est la fin des préliminaires! Allons sur du flex box. C'est par <a href="flex.html">ici</a> </p>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</body>
+</html>

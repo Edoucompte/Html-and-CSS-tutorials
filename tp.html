@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Flex et grid</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <h1>Apprenons ensemble</h1>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index.html#prerequis">Préreq</a></li>
+                    <li><a href="flex.html">Flex</a></li>
+                    <li><a href="#grid">Grid</a></li>
+                    <li><a href="#">TP</a></li>
+                </ul>
+            </nav>
+
+            <div id="hContent">
+                <h2>Tutoriel et TP en HTML et CSS</h2>
+                <p>Ceci est un site dans lequel nous montrons pas à pas comment utiliser des types 
+                    de propriétés d'affichage <strong>Flex</strong> et <strong>grid</strong>. 
+                    Pas de panique si vous ne connaissez rien à propos. 
+                    Ca tombe bien! Apprenons ensemble.</p>
+                    <button>Commencez !!!</button>
+            </div>
+
+        </header>
+
+        <main>
+            <section id="tp">
+                <h3 class="center"> Notre TP</h3>
+                <p>Voici venu le moment tant attendu, celui de la pratique. Comme je le disais au début toute chose en html et CSS est une boîte, et nous avons appris
+                    à les ranger avec flex. Utilisons cet outils pour faire la page web de notre restaurant. Admirons ensemble le résultat.
+                </p>
+                <div id="site"><img src="assets/headerTp.png" alt="Photo du site de restaurant à produire"></div>
+
+                <p> Subdivisons le travail en trois parties
+                    <ul>
+                        <li>l'entête</li>
+                        <li>le corps</li>
+                        <li>le pieds de page</li>
+                    </ul>
+                </p>
+
+                <p>Pour commencer mettre tout le code dans une div#container, &#60 div id="container" &#62.</p> A l'intérieur du body bien sûr. Puis ...
+
+                <h4> 1. L'entête</h4>
+                <p>Pour cette partie il vous faudra :
+                    <ol>
+                        <li>HTML</li>
+                        <ul>
+                            <li>Une balise &#60 header &#62 qui englobe toute l'entête </li>
+                            <li> Une balise &#60 nav &#62 qui contiendra notre menu. Le menu se compose :
+                                <ul>
+                                    <li>D'un titre, &#60 h1 &#62 ;</li>
+                                    <li> La liste de menu, Accueil, Plats du jour, Menus, Spécialités, A propos;</li>
+                                    <li> Un span qui contient deux boutons, &#60 button &#62, l'un "commander" et l'autre "contacter; <br>
+                                        (&#60 span &#62 &#60 button id="btn1" &#62 Commander &#60 /button &#62 &#60 button id="btn2" &#62 &#60 /button &#62 &#60 /span &#62) 
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Un conteneur, div.content, &#60 div class="content" &#62. Ce cadre contiendra:
+                                <ul>
+                                    <li>Une image dans un div.photo. ( Pour insérer une image, utiliser &#60 img src="assets/votre_imaage.jpeg" &#62  
+                                        en s'assurant que l'image est dans und dossier "assets" qui est dans votre projet de travil.) ;</li>
+                                    <li>Un div.content pour contenir le texte de l'entête, un titre et un paragraphe.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <li>CSS</li>
+                        <ul>
+                            <p>Utiliser convenablement les propriétés de flexbox.</p>
+                            <li>Appliquer les proprietes flex sur chacun des container: header, nav, ul de liste de menu, content.
+                                <ul>
+                                    <li>display: flex</li>
+                                    <li>flex-direction: convenable</li>
+                                    <li>justify-content: convenable</li>
+                                    <li>flex-basis pour la liste de menu</li>
+                                    <li>gap: valeurs convenable en rem, Comme 1.3rem ou 0.5rem</li>
+                                    <li>margin: auto</li>
+                                </ul>
+                                Elles ne sont pas toutes obligatoires pour obtenir le résulat.
+                            </li>
+                            <li>Définissez des dimensions fixes à votre image. Et changez la taille de police de vos titre et texte: font-size: 2.5rem;</li>
+                            <li> Mettez des padding à vos conteneur de texte.</li>
+                            <li>la couleur utilisée est: rgb(153, 12, 36)</li>
+                        </ul>
+                    </ol>
+                </p>
+                <h4> 2. Le corps </h4>
+                <h4> 3. Le pieds de page</h4>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

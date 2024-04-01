@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Flex et grid</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <h1>Apprenons ensemble</h1>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index.html#prerequis">Préreq</a></li>
+                    <li><a href="flex.html">Flex</a></li>
+                    <li><a href="#grid">Grid</a></li>
+                    <li><a href="tp.html">TP</a></li>
+                </ul>
+            </nav>
+
+            <div id="hContent">
+                <h2>Tutoriel et TP en HTML et CSS</h2>
+                <p>Ceci est un site dans lequel nous montrons pas à pas comment utiliser des types 
+                    de propriétés d'affichage <strong>Flex</strong> et <strong>grid</strong>. 
+                    Pas de panique si vous ne connaissez rien à propos. 
+                    Ca tombe bien! Apprenons ensemble.</p>
+                    <button>Commencez !!!</button>
+            </div>
+
+        </header>
+
+        <main>
+            <section id="introFlex">
+                <h3>Pourquoi flex box?</h3>
+                <p>En html toute nos balises ne sont que de boîtes. Et pour une disposition particulière, 
+                    on est appelé à ranger nos boîtes d'une certaine manière. explorons une disposition ensemble.</p>
+                <p>Créons deux "div" successifs. Et mettons y ce style</p>
+                <div class="photos">
+                    <img src="assets/deuxDiv.png" alt="deux cadres">
+                    <img src="assets/styleDeuxDiv.png" alt="style des deux cadres">
+                </div>
+                <p>Ces deux cadres prennent chacun une ligne. Et si nous voudrions les disposer sur la même ligne 🤔?</p>
+                <p>C'est là que <strong>flex</strong> intervient 😎</p>
+            </section>
+
+            <section id="flex" class="rightBlock">
+                <h3 class="right">Utiliser la propriété flex</h3>
+                <p>Pour utiliser cette propriété, il nous deux outils:
+                    <ul>
+                        <li>un 'div', <em>container</em>, qui contiendra tous nos éléments à ranger;</li>
+                        <li>Et nos éléments à ranger </li>
+                    </ul>
+                </p>
+                <p>En réaménageant notre code, on obtient ceci:</p>
+                <div class="photos">
+                    <img src="assets/container.png" alt="container">
+                    <img src="assets/styleContainerpng.png" alt="style du conatiner">
+                </div>
+                <p> Et comme par magie. Ils sont sur laui même ligne!!! Juste avec la propriété <strong>display:flex</strong> (ou display: inline-flex)</p>
+                <p>On apllique cette propriété au container.</p>
+            </section>
+
+            <section id="proprietes">
+                <h3>Les propriétés de <strong>flex</strong></h3>
+                <div class="box">
+                    <h4><strong> 1. flex-direction</strong></h4>
+                    <p> Cette propriété permet de préciser l'ordre d'alignement des boîtes à l'intérieur du conteneur.</p>
+                    <p>Nous pouvons disposer:</p>
+                    <ul>
+                        <li>En vertical: <em>flex-direction: column</em> (VC ou CV)</li>
+                        <li>En vertical dans l'odre inverse: <em>flex-direction: column-reverse</em> (VC ou CV)</li>
+                        <li>Sur  l'horizontal: <em>flex-direction: row ou row-reverse</em></li>
+                    </ul>
+                    <p>Testons ça rapidement. <br>
+                        Reprenons notre code et ajoutons cette propriété à notre container avec ces différentes valeurs.
+                    </p>
+                    <div class="photos">
+                        <img src="assets/container.png" alt=" deux cadres verticaux">
+                        <img src="assets/styleFlexDir.png" alt="style" id="img2">
+                    </div>
+                    <p>Et Suuuper! <br>
+                        C'est toujours basique mais bon. On y vient, les bonnes choses. 
+                    </p>
+                </div>
+                <div class="box rightBlock">
+                    <h4 class="center"><strong> 2. justify-content</strong></h4>
+                    <p> La propriété la plus utilisé en flexbox, (après display: flex bien sûr), justify-content. Cette propriété permet de modifier l'espacement entre les boîtes</p>
+                    <p>Nous avons les valeurs:
+                        <ul>
+                            <li> flex-start pour les disposer à gauche</li>
+                            <li> flex-end pour la droite</li>
+                            <li> center pour le centre</li>
+                            <li> space-between et space-around pour les espacer.</li>
+                        </ul>
+                        Perso, j'adore justify: center et space-around. On teste tout?
+                    </p>
+                    <div class="photos">
+                        <img src="assets/container.png" alt="">
+                        <img src="assets/styleJustify.png" alt="style justify-content">
+                    </div>
+                    Attention aux reverse , il renverse vraiment les choses. un row-reverse et un flex-end donne l'effet d'un flex-start. <br>
+                    '<strong>- x -  c'est bien égal +.</strong>'
+                    <p>C'est super! tout ca</p>
+                </div>
+                <div class="box">
+                    <h4><strong> 3. align-items</strong></h4>
+                    <p> Cette propriété permet de modifier l'espacement entre les boîtes suivant la seconde direction. 
+                        Elle prend plusieurs valeurs possibles : <em>baseline</em>, <em>center</em>, flex-start,end, safe</p>
+                        il faut remarquer que vscode vous propose toutes les valeurs possibles. Testez les chacunes!!!
+                    <p>En supposant que nous avons rangé nos boîtes en ligne, horizontal, centré sur cet axe, 
+                        nous pouvons décider de les centrer sur chacune de leur colonne. Ambigü? Ca donne ça:</p>
+                    <div class="photos">
+                        <img src="assets/containerAlign-item.png" alt="">
+                        <img src="assets/style-align-item.png" alt="">
+                    </div>
+                    <p>Avant de voir l'impact de ceci, il à faut donner des tailles différentes à nos boîtes.</p>
+                </div>
+                <div class="box rightBlock">
+                    <h4 class="center"><strong> 4. align-content</strong></h4>
+                    <p> Cette propriété permet est semblable à la précédante, elle permet de mieux amnager nos boîtes à l'interieur du container. On teste les valeurs possibles</p>
+                </div>
+                <div class="box">
+                    <h4><strong> 5. flex-wrap</strong></h4>
+                    <p> Cette propriété permet d'eviter un problème qu'on appelle overflow😢.</p>
+                    <p>Essayons de créer 20 cadres dans notre conteneur rangés en ligne.</p>
+                    <div class="photos">
+                        <img src="assets/overflow.png" alt="22 cadres">
+                        <img src="assets/styleOverflow.png" alt="leur feuille de style">
+                    </div>
+                    <p>Ca dépasse les bornes, comme lorsqu'on gros bras porte du M.</p>
+                    <p>Pour y remdier, appliquons la propriété <em>flex-wrap: wrap;</em> </p>
+                    <p>Eh là!!! Ils utilisent convenablement l'espace. Et c'est <em>responsive</em> en plus!!! Ca veut dire que ça s'adapte à la largeur de l'écran.
+                        Réduisez le pour voir.
+                    </p>
+                </div>
+            </section>
+
+            <section id="flexPlus">
+                <h3 class="right">Un peu plus de précision dans le rangement</h3>
+                <p>Bon vous pensez pas qu'il est temps qu'on commence le TP? Moi aussi, mais je veux vous donner un chic petit truc en plus. Croyez moi, c'est pour bientôt.</p>
+                <div class="box pinkContent">
+                    <h4 class="pink"><strong> Mettons de l'ordre avec order</strong></h4>
+                    <p> Cette propriété permet de préciser l'ordre de positionnement des enfants du container, nos 22 boites. On y va.</p>
+                </div>
+
+                <div class="box rightBlock">
+                    <p>C'est pas ici!!! C'est là bas!!!</p>
+                </div>
+
+                <div class="box">
+                    <h4>1. <strong>order</strong></h4>
+                    <p> On précise l'ordre d'arriver de chacun d'eux.</p>
+                    <div class="photos">
+                        <img src="assets/overflow.png" alt="Photo des 22 boîtes, div">
+                        <img src="assets/order.png" alt="propriété order">
+                    </div>
+                    <p>Désolé j'ai juste ramener le deuxième cadre à la fin. J'avais la flemme 😅. Mais c'est très utile quand on veut changer la place de deux 
+                        boutons de menu sans trop se tracasser, à défaut de tout couper.
+                    </p>
+                </div>
+
+                <div class="box rightBlock">
+                    <p>Non, mais franchement! Vous n'avez pas mal au cou? Restons à la gauche!!!</p>
+                </div>
+
+                <div class="box">
+                    <h4>2. <strong>flex-grow</strong></h4>
+                    <p>Elle permet d'agrandir la taille d'un enfant. On mentionne juste un nombre de 1 à ... qui caractérise
+                        la grandeur de cette boîte en par rapport aux autres. On y va.
+                    </p>
+                    Toujours photos!!!
+                    <div class="photos">
+                        <img src="assets/flexGrow.png" alt="">
+                    </div>
+                    Bien sûr que j'allais m'emprendre à notre cobaille 'cadre2' 🙃! J'ai aussi modifier cadre1 😌.
+                    <p>Et nous pouvons observer le résultat.</p>
+                </div>
+
+                <div class="box rightBlock">
+                    C'est bon cette fois-ci j'arrête. Plus de farce.
+                    <h4 class="center">3. <strong>flex-shrink</strong></h4>
+                    <p>Elle permet, inversement à la précédante, de retrécir un enfant par rapport aux autres.</p> 
+                    J'ai oublié 'é', à rétrécir, c'est quoi mon problème?
+                    <p>On teste? Il suffit de changer <em>flex-grow</em> par <em>flex-shrink dans le style de l'enfant concerné.</em></p>
+                    Pour ceux qui veulent savoir, moi aussi, comme vous, je suivais pas mes cours d'anglais 😅.
+                </div>
+
+                <div class="box">
+                    <h4> 4. <strong>flex-basis</strong></h4>
+                    <p> Elle permet de forcer la largeur d'une boîte par rapport à l'espace disponible. Elle est en pourcentage, souvent.</p>
+                    <div class="photos">
+                        <img src="assets/flexBasis.png" alt="flex basis style picture">
+                    </div>
+                    <p>On peut utiliser un raccourci pour les trois dernières propriétés en un <em>flex</em>. Voici le format:</p>
+                    <p> <em>flex:</em> <em>flex-grow_value</em>  <em>flex-shrink_value</em> <em>flex-basis_percent</em></p>
+                    <p>Ex: flex: 1 1 50%; </p>
+                    Big up à Carmel, le goat 😎.
+                </div>
+
+                <div class="box rightBlock">
+                    Une dernière notion importante. Vous permettez?
+                    <h4> <strong>Le gap</strong> </h4>
+                    <p>Cette propriété permet de modifier l'espacement entre les boîtes. Elle s'applique sur le container</p>
+                    <div class="photos">
+                        <img src="assets/gap.png" alt="Photo d'espace entre flexbox">
+                    </div>
+                    <p>On remarque bien l'espacement. C'est pas loin d'un géant clavier.</p>
+                    <p>Ca me donne l'envie de vous donner comme exercie: Représenter votre clavier sur un page web 😅. Ce serait un très bon exercice pour ceux qui 
+                        veulent maîtriser. Mais notre  TP sera plus cool. Soyez sans crainte.</p>
+                </div>
+                <p>C'est la fin de l'initiation à flexbox! Allons au TP!!! C'est par <a href="tp.html">ici</a></p>
+
+            </section>
+        </main>
+    </div>
+</body>
+</html>

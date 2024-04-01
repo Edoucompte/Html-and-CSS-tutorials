@@ -1,0 +1,182 @@
+/* paramètres généraux  */
+
+/* les liens */
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+em{
+    background: #90a39b;
+}
+
+/* les sections */
+section{
+    padding: 7%;
+    margin: auto;
+}
+
+.container{
+    padding: 0 5% 0;
+}
+
+p, li{
+    font-size: 1.5rem;
+}
+
+/* les titres */
+h2{
+    font-size: 4rem;
+    text-align: center;
+}
+
+h3{
+    font-size: 3rem;
+    text-align: left;
+}
+
+h4{
+    font-size: 2rem;
+}
+
+/* les positions de text */
+.center{
+    text-align: center;
+}
+
+.right{
+    text-align: right;
+}
+
+/* les positions de block */
+.rightBlock{
+    width: 50%;
+    position: relative;
+    left: 20%;
+}
+
+.rightBlock.box{
+    left: 45%;
+}
+
+
+/* les photos */
+.photos{
+    margin: auto;
+}
+
+.photos div{
+    margin: auto;
+}
+
+img{
+    width: 95%;
+}
+
+
+/* une boite de présentation */
+.box{
+    padding: 2%;
+    background: #c6e7b9;
+    width: 50%;
+    padding: 15px;
+    margin: 15px;
+}
+
+.box h4{
+    background: rgb(11, 77, 11);
+    color: white;
+    padding: 10px;
+}
+
+/* fin de paramètres généraux */
+
+
+/* barre de menu */
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    background: rgb(11, 77, 11);
+    color: white;
+    padding: 2%;
+    margin: auto;
+}
+
+nav ul{
+    display: flex;
+    gap: 10%;
+    margin: auto;
+    padding: 0;
+    list-style: none;
+}
+
+nav li{
+    border: 1px solid white;
+    padding: 3%;
+    border-radius: 10%;
+}
+
+/* fin barre de menu */
+
+
+/* debut contenu du header */
+
+#hContent{
+    padding: 5% 20%;
+    background: #c6e7b9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#hContent p{
+    font-size: 2rem;
+}
+
+#hContent button{
+    padding: 1%;
+    border-radius: 15px;
+    font-size: 1.1rem;
+}
+
+#hContent button:hover{
+    background: rgb(11, 77, 11);
+    color: white;
+    transition: .5s;
+}
+
+/* fin de header */
+
+/* debut 
+#debut img{
+    width: 50rem;
+}
+/* fin debut */
+
+/* debut de type */
+
+/* fin  */
+
+/* debut proprietes */
+
+
+
+/* fin */
+
+/* couleurs roses */
+
+#flexPlus h4{
+    background: #77085f;
+} 
+#flexPlus .box{
+    background: #bd4aa4;
+    color: white;
+}
+
+/* tp debut */
+#site{
+    margin: .5rem;
+}
