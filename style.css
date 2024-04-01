@@ -107,7 +107,8 @@ nav{
 nav ul{
     display: flex;
     flex-wrap: wrap;
-    gap: 10%;
+    flex-basis: 60%;
+    gap: 4%;
     margin: auto;
     padding: 0;
     list-style: none;
