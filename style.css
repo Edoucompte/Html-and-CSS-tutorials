@@ -23,6 +23,7 @@ section{
 
 p, li{
     font-size: 1.5rem;
+    text-justify:distribute;
 }
 
 /* les titres */
@@ -77,7 +78,6 @@ img{
 
 /* une boite de présentation */
 .box{
-    padding: 2%;
     background: #c6e7b9;
     width: 50%;
     padding: 15px;
@@ -97,7 +97,7 @@ img{
 
 nav{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     background: rgb(11, 77, 11);
     color: white;
     padding: 2%;
@@ -106,7 +106,6 @@ nav{
 
 nav ul{
     display: flex;
-    flex-wrap: wrap;
     flex-basis: 60%;
     gap: 4%;
     margin: auto;
@@ -139,7 +138,7 @@ nav li{
 }
 
 #hContent button{
-    padding: 1%;
+    padding: 3%;
     border-radius: 15px;
     font-size: 1.1rem;
 }
@@ -151,22 +150,6 @@ nav li{
 }
 
 /* fin de header */
-
-/* debut 
-#debut img{
-    width: 50rem;
-}
-/* fin debut */
-
-/* debut de type */
-
-/* fin  */
-
-/* debut proprietes */
-
-
-
-/* fin */
 
 /* couleurs roses */
 
@@ -181,4 +164,54 @@ nav li{
 /* tp debut */
 #site{
     margin: .5rem;
+}
+
+@media (max-width: 976px){
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        width: 85%;
+        top: 7rem;
+        background: rgb(11, 77, 11);
+        display: none;
+    }
+
+    nav li{
+        border: none;
+    }
+
+    nav h1{
+        margin: 1rem 1rem;
+        font-size: 1.2rem;
+    }
+
+    h2{
+        font-size: 2.5rem;
+    }
+
+    #hContent p{
+        font-size: 1.5rem;
+    }
+
+    h3{
+        font-size: 2rem;
+    }
+
+
+    .box{
+        width: 80%;
+    }
+
+    .rightBlock, .rightBlock.box{   
+        left: 15%;
+    }
+
+    section .container{
+        padding: 0;
+    }
+    
+    section p, section li{
+        font-size: 1.2rem;
+    }
 }
